@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/first_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/first_p_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar">
+
+            <ImageView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:src="@drawable/logo_todo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:ignore="ContentDescription"
+                tools:layout_editor_absoluteX="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <CheckBox
+            android:id="@+id/done11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:theme="@style/MyCheckBox" />
+
+        <TextView
+            android:id="@+id/page_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/all_data"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textColor="@color/toolbar"
+            android:layout_below="@+id/main_toolbar"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/star_killers_first"
+            android:layout_centerHorizontal="true"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/to_do_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:layout_below="@id/page_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="70sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            tools:listitem="@layout/item_list" />
+
+        <Button
+            android:id="@+id/plus"
+            style="@style/ButtonStyle"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_20sp"
+            android:layout_marginBottom="70sp"
+            android:gravity="center"
+            android:text="@string/plus"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/toolbar">
+
+            <ImageButton
+                android:id="@+id/home"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/delete"
+                android:src="@drawable/back_hand_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

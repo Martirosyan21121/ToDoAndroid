@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/todo_nav"
+    app:startDestination="@id/firstFragment">
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.todolist.view.fragments.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_addDataFragment"
+            app:destination="@id/addDataFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_updateDataFragment"
+            app:destination="@id/update_data_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDataFragment"
+        android:name="com.example.todolist.view.fragments.AddDataFragment"
+        android:label="fragment_add_data"
+        tools:layout="@layout/fragment_add_data" >
+        <action
+            android:id="@+id/action_addDataFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/update_data_fragment"
+        android:name="com.example.todolist.view.fragments.UpdateDataFragment"
+        android:label="@string/update"
+        tools:layout="@layout/fragment_update_data" >
+        <action
+            android:id="@+id/action_updateDataFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.todolist.view.entity.ItemData" />
+    </fragment>
+</navigation>

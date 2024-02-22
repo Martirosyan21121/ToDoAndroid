@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ToDoList" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/navigation_bar_color</item>
+        <item name="android:windowBackground">@drawable/window_f_b</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+
+    </style>
+
+    <style name="Theme.ToDoList" parent="Base.Theme.ToDoList" />
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+        <!-- Customize your light theme here. -->
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/toolbar</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
+
+    <style name="ButtonStyle">
+        <item name="android:textColor">#FFFFFF</item> <!-- Text color -->
+        <item name="android:background">@drawable/rounded_button</item> <!-- Background drawable -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- ... other button-related attributes ... -->
+    </style>
+
+
+    <style name="ToDo.EditText.Style" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/toolbar</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="ButtonStyleForAdd">
+        <item name="android:textColor">#FFFFFF</item> <!-- Text color -->
+        <item name="android:background">@drawable/for_add_button</item> <!-- Background drawable -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- ... other button-related attributes ... -->
+    </style>
+
+    <style name="MyTextViewStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/toolbar</item>
+        <item name="android:background">@drawable/item_background</item>
+        <!-- Add more attributes as needed -->
+    </style>
+
+    <style name="CustomTimePickerDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorPrimary">@color/toolbar</item>
+        <item name="colorAccent">@color/toolbar</item> <!-- Accent color for selectors and buttons -->
+        <item name="android:textColorSecondary">@color/toolbar</item><!-- Divider color -->
+        <!-- Background drawable -->
+        <!-- Accent color for selectors and buttons -->
+        <!-- Add more customizations as needed -->
+    </style>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="navigation_bar_color">#74000000</color>
+    <color name="toolbar">#FF9800</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="status_bar_color">#FFB64C</color>
+    <color name="edit_text">#39FFB64C</color>
+    <color name="green">#42F800</color>
+</resources>
